@@ -16,14 +16,14 @@ describe('Primitive values', () => {
   it('should split tests', () => {
     const number = 10;
 
-    expect(number).toBe(10);
-    expect(number).toEqual(10);
+    expect(number).toBe(10); // Trabalhar com valores
+    expect(number).toEqual(10); // Trabalhar com objetos
 
-    expect(number).not.toBeFalsy();
-    expect(number).toBeTruthy();
+    expect(number).not.toBeFalsy(); // Teste booleano
+    expect(number).toBeTruthy(); // Teste booleano
 
-    expect(number).toBeGreaterThan(9);
-    expect(number).toBeGreaterThanOrEqual(10);
+    expect(number).toBeGreaterThan(9); // Comparação
+    expect(number).toBeGreaterThanOrEqual(10); // Comparação
   });
 });
 

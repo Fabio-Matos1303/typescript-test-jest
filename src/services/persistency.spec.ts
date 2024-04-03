@@ -1,16 +1,18 @@
 import { Persistency } from './persistency';
 
 describe('Persistency', () => {
+  // Limpar os Mocks depois de cada teste
   afterEach(() => jest.clearAllMocks());
 
   it('should return undefined', () => {
-    // System under test
+    // System Under Test
     const sut = new Persistency();
     expect(sut.saveOrder()).toBeUndefined();
   });
 
   it('should call console.log once', () => {
     const sut = new Persistency();
+    // jest.spyOn(objeto, 'método')
     const consoleSpy = jest.spyOn(console, 'log');
     sut.saveOrder();
     expect(consoleSpy).toHaveBeenCalledTimes(1);
